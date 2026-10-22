@@ -53,3 +53,11 @@
   .btn-cta { transition-property: color, background-color, transform, box-shadow; transition-duration: .2s; }
   .btn-cta:hover { transform: translateY(-1px) scale(1.02); box-shadow: 0 8px 20px rgba(214, 58, 26, 0.35); }
 }
+
+/* Las tarjetas crecen ligeramente al pasar el cursor (o al enfocar con teclado).
+   Se usa la propiedad `scale` (independiente de `transform`) para no chocar con GSAP.
+   Solo en dispositivos con ratón y sin "reducir movimiento". Va fuera de @layer para ganar a las utilidades. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hover-grow { position: relative; transition: scale .35s cubic-bezier(.22, 1, .36, 1), box-shadow .3s, background-color .3s, color .3s; }
+  .hover-grow:hover, .hover-grow:focus-within { scale: 1.03; z-index: 2; }
+}
