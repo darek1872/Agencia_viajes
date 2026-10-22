@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- include:head.html -->
+<script type="module" src="/src/main.js"></script>
+</head>
+<body class="min-h-screen">
+<!-- include:header.html -->
+<main id="contenido" tabindex="-1" class="w-full pt-28 bg-surface">
+{{breadcrumb}}
+<article class="max-w-3xl mx-auto px-margin-mobile md:px-margin py-10 lg:py-16 legal">
+  <h1 class="font-headline-lg-mobile text-headline-lg-mobile lg:font-headline-lg lg:text-headline-lg text-primary mb-2">Aviso legal</h1>
+  <p class="font-body-sm text-body-sm text-on-surface-variant mb-8">Última actualización: [[Fecha]]. Texto base a revisar por un profesional jurídico antes de publicar.</p>
+  <h2>1. Titular del sitio web</h2>
+  <p>En cumplimiento de la Ley 34/2002 de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE), se informa de que este sitio web pertenece a:</p>
+  <ul>
+    <li>Titular: {{site.legalName}} (nombre comercial: {{site.name}})</li>
+    <li>CIF/NIF: {{site.legal.cif}}</li>
+    <li>Domicilio: {{site.addressStreet}}, {{site.postalCode}} {{site.addressLocality}}</li>
+    <li>Correo electrónico: <a href="mailto:{{site.email}}">{{site.email}}</a></li>
+    <li>Teléfono: {{site.phoneDisplay}}</li>
+    <li>Registro Mercantil: {{site.legal.registroMercantil}}</li>
+    <li>Agencia de viajes: {{site.legal.titulo}}</li>
+    <li>Garantías y seguros: {{site.legal.seguro}}</li>
+  </ul>
+  <h2>2. Condiciones de uso</h2>
+  <p>El acceso y uso de este sitio web atribuye la condición de usuario e implica la aceptación de este aviso legal. El usuario se compromete a hacer un uso adecuado de los contenidos y a no emplearlos para actividades ilícitas.</p>
+  <h2>3. Información de viajes y reservas</h2>
+  <p>La información publicada tiene carácter orientativo. Las condiciones definitivas de cada viaje (precio, servicios incluidos, cancelación) se facilitan por escrito en el presupuesto y en el contrato de viaje antes de la reserva.</p>
+  <h2>4. Propiedad intelectual</h2>
+  <p>Los textos, imágenes, logotipos y demás elementos de este sitio son titularidad de {{site.legalName}} o se utilizan con la debida autorización. Queda prohibida su reproducción sin permiso previo.</p>
+  <h2>5. Responsabilidad y enlaces</h2>
+  <p>El titular no se hace responsable de los contenidos de sitios de terceros enlazados ni de los daños derivados de interrupciones técnicas ajenas a su control.</p>
+  <h2>6. Legislación aplicable</h2>
+  <p>Este aviso se rige por la legislación española. [[Jurisdicción aplicable, si procede]]</p>
+</article>
+</main>
+<!-- include:footer.html -->
+</body>
+</html>

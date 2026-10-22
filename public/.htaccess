@@ -1,0 +1,22 @@
+# Apache / cPanel. Fuerza HTTPS y un único host (sustituye tudominio.com por el tuyo y elige con o sin www).
+RewriteEngine On
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^tudominio\.com$ [NC]
+RewriteRule ^ https://www.tudominio.com%{REQUEST_URI} [L,R=301]
+
+# 404 real (código HTTP 404, no 200)
+ErrorDocument 404 /404.html
+
+Options -Indexes
+<FilesMatch "\.map$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  <FilesMatch "\.(js|css|webp|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>

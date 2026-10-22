@@ -1,0 +1,72 @@
+<footer class="w-full bg-primary text-on-primary pt-space-xl pb-space-lg mb-20 md:mb-0">
+  <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg mb-space-xl">
+      <div class="space-y-space-md">
+        <a href="/" class="flex items-center gap-space-sm" aria-label="{{site.name}}, ir al inicio">
+          <img src="/favicon.svg" alt="" width="32" height="32" class="h-8 w-8">
+          <span class="font-headline-sm text-headline-sm tracking-tight text-on-primary">{{site.name}}</span>
+        </a>
+        <p class="font-body-sm text-body-sm text-on-primary-container max-w-sm">Agencia de viajes especializada en viajes a medida, circuitos, cruceros y escapadas, con asesoramiento personal en cada paso.</p>
+        <ul class="flex items-center gap-3">
+          {{#if site.instagram}}<li><a class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center hover:bg-secondary transition-colors" href="{{site.instagram}}" rel="noopener noreferrer" target="_blank" aria-label="Instagram (se abre en una pestaña nueva)">{{icon:instagram|w-5 h-5}}</a></li>{{/if}}
+          {{#if site.facebook}}<li><a class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center hover:bg-secondary transition-colors" href="{{site.facebook}}" rel="noopener noreferrer" target="_blank" aria-label="Facebook (se abre en una pestaña nueva)">{{icon:facebook|w-5 h-5}}</a></li>{{/if}}
+        </ul>
+      </div>
+      <nav aria-labelledby="foot-destinos" class="space-y-space-sm">
+        <h2 id="foot-destinos" class="font-label-lg text-label-lg text-on-primary">Destinos</h2>
+        <ul class="space-y-2 font-body-sm text-body-sm text-on-primary-container">
+          <li><a class="hover:text-on-primary transition-colors" href="/#destinos">Caribe y playas</a></li>
+          <li><a class="hover:text-on-primary transition-colors" href="/#destinos">Europa clásica</a></li>
+          <li><a class="hover:text-on-primary transition-colors" href="/#destinos">Asia</a></li>
+          <li><a class="hover:text-on-primary transition-colors" href="/#destinos">Escapadas urbanas</a></li>
+          <li><a class="hover:text-on-primary transition-colors" href="/#destinos">Islas y naturaleza</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="foot-productos" class="space-y-space-sm">
+        <h2 id="foot-productos" class="font-label-lg text-label-lg text-on-primary">Productos</h2>
+        <ul class="space-y-2 font-body-sm text-body-sm text-on-primary-container">
+          <li><a class="hover:text-on-primary transition-colors" href="/#viaje-medida" data-tipo="paquetes">Paquetes</a></li>
+          <li><a class="hover:text-on-primary transition-colors" href="/#viaje-medida" data-tipo="circuitos">Circuitos</a></li>
+          <li><a class="hover:text-on-primary transition-colors" href="/#viaje-medida" data-tipo="cruceros">Cruceros</a></li>
+          <li><a class="hover:text-on-primary transition-colors" href="/#viaje-medida" data-tipo="escapadas">Escapadas</a></li>
+          <li><a class="hover:text-on-primary transition-colors" href="/#ofertas">Ofertas destacadas</a></li>
+        </ul>
+      </nav>
+      <div class="space-y-space-sm">
+        <h2 class="font-label-lg text-label-lg text-on-primary">Atención al cliente</h2>
+        <ul class="space-y-2 font-body-sm text-body-sm text-on-primary-container">
+          <li><a class="hover:text-on-primary transition-colors flex items-center gap-1.5" href="tel:{{site.phoneTel}}">{{icon:phone|w-4 h-4 shrink-0}}{{site.phoneDisplay}}</a></li>
+          <li><a class="hover:text-on-primary transition-colors flex items-center gap-1.5 break-all" href="mailto:{{site.email}}">{{icon:mail|w-4 h-4 shrink-0}}{{site.email}}</a></li>
+          <li class="flex items-start gap-1.5">{{icon:clock|w-4 h-4 shrink-0 mt-0.5}}<span>{{site.hoursText}}</span></li>
+          <li class="flex items-start gap-1.5">{{icon:pin|w-4 h-4 shrink-0 mt-0.5}}<span>{{site.addressStreet}}, {{site.postalCode}} {{site.addressLocality}}</span></li>
+          <li><a class="hover:text-on-primary transition-colors" href="/#faq">Preguntas frecuentes</a></li>
+          <li><a class="hover:text-on-primary transition-colors" href="/contacto/">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg-primary-container/40 rounded-xl p-space-md mb-space-lg font-body-sm text-[12px] leading-relaxed text-on-primary-container">
+      <p><strong class="text-on-primary">{{site.legalName}}</strong> · CIF {{site.legal.cif}} · {{site.legal.registroMercantil}}</p>
+      <p class="mt-1">{{site.legal.titulo}} · {{site.legal.seguro}}</p>
+    </div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-space-sm pt-space-sm font-body-sm text-body-sm text-on-primary-container">
+      <p>© {{year}} {{site.name}}. Todos los derechos reservados.</p>
+      <ul class="flex flex-wrap items-center justify-center gap-x-space-md gap-y-1">
+        <li><a class="hover:text-on-primary underline-offset-2 hover:underline" href="/aviso-legal/">Aviso legal</a></li>
+        <li><a class="hover:text-on-primary underline-offset-2 hover:underline" href="/privacidad/">Política de privacidad</a></li>
+        <li><a class="hover:text-on-primary underline-offset-2 hover:underline" href="/cookies/">Política de cookies</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<!-- Contacto flotante: WhatsApp (escritorio) y barra inferior (móvil) -->
+<div class="hidden md:flex fixed bottom-6 right-6 z-40 items-center group">
+  <span class="hidden lg:flex opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity mr-3 bg-surface-container-lowest text-primary px-3.5 py-1.5 rounded-full font-label-md text-label-md shadow-md items-center gap-1.5 pointer-events-none">¿Necesitas ayuda? Chatea con un asesor</span>
+  <a class="w-14 h-14 bg-[#128C7E] hover:bg-[#0b6b60] text-white rounded-full flex items-center justify-center shadow-[0_12px_24px_rgba(37,211,102,0.35)] transition-colors" href="https://wa.me/{{site.whatsapp}}?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20viaje" rel="noopener noreferrer" target="_blank" aria-label="Escribir por WhatsApp (se abre en una pestaña nueva)">{{icon:chat|w-7 h-7}}</a>
+</div>
+<nav aria-label="Contacto rápido" class="md:hidden fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(11,37,69,0.08)]">
+  <div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm">
+    <a class="flex-1 flex flex-col items-center justify-center h-14 rounded-xl text-on-surface-variant hover:text-secondary" href="tel:{{site.phoneTel}}">{{icon:phone|w-[22px] h-[22px]}}<span class="font-label-sm text-label-sm">Llamar</span></a>
+    <a class="flex-1 flex flex-col items-center justify-center h-14 rounded-xl text-on-surface-variant hover:text-secondary" href="https://wa.me/{{site.whatsapp}}" rel="noopener noreferrer" target="_blank">{{icon:chat|w-[22px] h-[22px] text-[#128C7E]}}<span class="font-label-sm text-label-sm">WhatsApp</span></a>
+    <a class="flex-[1.5] h-12 bg-cta hover:bg-cta-hover text-on-primary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-1.5 shadow-[0_8px_20px_rgba(214,58,26,0.35)] px-2 text-center leading-tight" href="/#viaje-medida">{{icon:file|w-[18px] h-[18px]}}<span>Pedir presupuesto</span></a>
+  </div>
+</nav>

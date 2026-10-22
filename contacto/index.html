@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- include:head.html -->
+<script type="module" src="/src/main.js"></script>
+</head>
+<body class="min-h-screen">
+<!-- include:header.html -->
+<main id="contenido" tabindex="-1" class="w-full pt-28 bg-surface">
+{{breadcrumb}}
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin py-10 lg:py-16" aria-labelledby="contacto-title">
+  <div class="max-w-3xl mb-10" data-reveal>
+    <h1 id="contacto-title" class="font-headline-lg-mobile text-headline-lg-mobile lg:font-display lg:text-display text-primary">Contacta con nuestro equipo de viajes</h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant mt-4">Llámanos, escríbenos por WhatsApp o cuéntanos tu idea en el formulario. Te ayudamos a planificar tu viaje sin compromiso.</p>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+    <div class="lg:col-span-5 grid gap-4" data-stagger>
+      <a class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" href="tel:{{site.phoneTel}}"><span class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">{{icon:phone|w-6 h-6}}</span><span><span class="block font-headline-sm text-[16px] text-primary font-bold">Teléfono</span><span class="block font-body-md text-on-surface-variant">{{site.phoneDisplay}}</span></span></a>
+      <a class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" href="https://wa.me/{{site.whatsapp}}" rel="noopener noreferrer" target="_blank"><span class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">{{icon:chat|w-6 h-6}}</span><span><span class="block font-headline-sm text-[16px] text-primary font-bold">WhatsApp</span><span class="block font-body-md text-on-surface-variant">Escríbenos (se abre en una pestaña nueva)</span></span></a>
+      <a class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" href="mailto:{{site.email}}"><span class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">{{icon:mail|w-6 h-6}}</span><span class="min-w-0"><span class="block font-headline-sm text-[16px] text-primary font-bold">Correo electrónico</span><span class="block font-body-md text-on-surface-variant break-all">{{site.email}}</span></span></a>
+      <div class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-lowest shadow-sm"><span class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">{{icon:pin|w-6 h-6}}</span><span><span class="block font-headline-sm text-[16px] text-primary font-bold">Dónde estamos</span><span class="block font-body-md text-on-surface-variant">{{site.addressStreet}}, {{site.postalCode}} {{site.addressLocality}} ({{site.addressRegion}})</span></span></div>
+      <div class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-lowest shadow-sm"><span class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">{{icon:clock|w-6 h-6}}</span><span><span class="block font-headline-sm text-[16px] text-primary font-bold">Horario de atención</span><span class="block font-body-md text-on-surface-variant">{{site.hoursText}}</span></span></div>
+    </div>
+    <div class="lg:col-span-7 bg-surface-container-lowest rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg" data-reveal>
+      <h2 class="font-headline-sm text-2xl text-primary font-bold mb-2">Solicita tu presupuesto gratuito</h2>
+      <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Rellena este breve formulario y te responderemos lo antes posible.</p>
+      <!-- include:quote-form.html -->
+    </div>
+  </div>
+</section>
+</main>
+<!-- include:footer.html -->
+</body>
+</html>

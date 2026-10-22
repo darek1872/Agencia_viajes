@@ -1,0 +1,81 @@
+<form class="space-y-4" data-form="presupuesto" id="form-presupuesto" method="post" novalidate>
+  <input type="hidden" name="formulario" value="Solicitud de presupuesto">
+  <div class="hidden" aria-hidden="true"><label>No rellenar este campo<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <label class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold" for="f-destino">¿Dónde quieres viajar?</label>
+      <div class="relative">{{icon:pin|absolute left-3 top-3.5 w-[18px] h-[18px] text-outline pointer-events-none}}
+        <input class="field pl-10" id="f-destino" name="destino" type="text" autocomplete="off" placeholder="Ej. Japón, Costa Rica, Polinesia...">
+      </div>
+    </div>
+    <div>
+      <label class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold" for="f-fechas">Fechas estimadas</label>
+      <div class="relative">{{icon:calendar|absolute left-3 top-3.5 w-[18px] h-[18px] text-outline pointer-events-none}}
+        <input class="field pl-10" id="f-fechas" name="fechas" type="text" autocomplete="off" placeholder="Ej. agosto o 15 días en otoño">
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <label class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold" for="f-tipo">Tipo de viaje</label>
+      <div class="relative">{{icon:briefcase|absolute left-3 top-3.5 w-[18px] h-[18px] text-outline pointer-events-none}}
+        <select class="field pl-10 appearance-none cursor-pointer" id="f-tipo" name="tipo">
+          <option value="">Aún no lo sé</option><option value="paquetes">Paquete</option><option value="circuitos">Circuito</option><option value="cruceros">Crucero</option><option value="escapadas">Escapada</option><option value="vuelos">Solo vuelos</option><option value="hoteles">Solo hotel</option>
+        </select>{{icon:chevron-down|absolute right-3 top-3.5 w-[18px] h-[18px] text-outline pointer-events-none}}
+      </div>
+    </div>
+    <div>
+      <label class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold" for="f-estilo">Estilo de viaje</label>
+      <div class="relative">{{icon:heart|absolute left-3 top-3.5 w-[18px] h-[18px] text-outline pointer-events-none}}
+        <select class="field pl-10 appearance-none cursor-pointer" id="f-estilo" name="estilo">
+          <option value="">Sin preferencia</option><option value="luna-de-miel">Luna de miel</option><option value="familia">En familia</option><option value="aventura">Aventura</option><option value="lujo">Viajes de lujo</option><option value="grupos">Grupos y amigos</option><option value="escapada">Escapada</option><option value="empresa">Empresa</option>
+        </select>{{icon:chevron-down|absolute right-3 top-3.5 w-[18px] h-[18px] text-outline pointer-events-none}}
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <label class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold" for="f-presupuesto">Presupuesto orientativo por persona</label>
+      <div class="relative">{{icon:wallet|absolute left-3 top-3.5 w-[18px] h-[18px] text-outline pointer-events-none}}
+        <select class="field pl-10 appearance-none cursor-pointer" id="f-presupuesto" name="presupuesto">
+          <option value="">Prefiero no indicarlo</option><option>Menos de 1.000 €</option><option>1.000 € - 2.000 €</option><option>2.000 € - 3.500 €</option><option>Más de 3.500 €</option>
+        </select>{{icon:chevron-down|absolute right-3 top-3.5 w-[18px] h-[18px] text-outline pointer-events-none}}
+      </div>
+    </div>
+    <div>
+      <label class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold" for="f-viajeros">Número de viajeros</label>
+      <div class="relative">{{icon:users|absolute left-3 top-3.5 w-[18px] h-[18px] text-outline pointer-events-none}}
+        <input class="field pl-10" id="f-viajeros" name="viajeros" type="text" autocomplete="off" placeholder="Ej. 2 adultos y 1 niño">
+        </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div>
+      <label class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold" for="f-nombre">Nombre y apellidos <span aria-hidden="true">*</span></label>
+      <input class="field" id="f-nombre" name="nombre" type="text" autocomplete="name" required placeholder="Tu nombre">
+    </div>
+    <div>
+      <label class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold" for="f-telefono">Teléfono (WhatsApp) <span aria-hidden="true">*</span></label>
+      <input class="field" id="f-telefono" name="telefono" type="tel" autocomplete="tel" required placeholder="600 000 000">
+    </div>
+    <div>
+      <label class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold" for="f-email">Correo electrónico <span aria-hidden="true">*</span></label>
+      <input class="field" id="f-email" name="email" type="email" autocomplete="email" required placeholder="tu@correo.com">
+    </div>
+  </div>
+  <div>
+    <label class="block font-label-sm text-xs text-on-surface-variant mb-1 font-semibold" for="f-mensaje">Cuéntanos más (opcional)</label>
+    <textarea class="field" id="f-mensaje" name="mensaje" rows="3" placeholder="Intereses, ocupación de habitaciones, necesidades especiales..."></textarea>
+  </div>
+  <div class="flex items-start gap-3">
+    <input class="mt-1 w-5 h-5 shrink-0 accent-secondary" id="f-consent" name="consentimiento" type="checkbox" value="Acepta la política de privacidad" required>
+    <label class="font-body-sm text-xs text-on-surface-variant" for="f-consent">He leído y acepto la <a class="text-secondary underline" href="/privacidad/">política de privacidad</a> y consiento que traten mis datos para responder a mi solicitud. <span aria-hidden="true">*</span></label>
+  </div>
+  <div data-form-status class="hidden rounded-xl px-4 py-3 font-body-sm text-body-sm" tabindex="-1"></div>
+  <div class="pt-2">
+    <button class="w-full py-4 bg-cta hover:bg-cta-hover disabled:opacity-60 disabled:cursor-wait text-on-primary font-headline-sm text-base font-bold rounded-xl shadow-[0_10px_25px_-5px_rgba(255,90,54,0.4)] transition-colors flex items-center justify-center gap-2" type="submit">
+      {{icon:send|w-5 h-5}}<span data-submit-label>Recibir mi propuesta gratis</span>
+    </button>
+  </div>
+  <p class="flex items-center justify-center gap-2 text-center text-[12px] text-on-surface-variant pt-1">{{icon:lock|w-4 h-4 text-secondary shrink-0}}<span>Sin compromiso. Usaremos tus datos solo para responder a tu solicitud. * Campos obligatorios.</span></p>
+</form>

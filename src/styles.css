@@ -1,0 +1,55 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/plus-jakarta-sans';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-padding-top: 8rem; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+  body { @apply bg-surface font-body-md text-body-md text-on-surface antialiased; margin: 0; }
+  :focus-visible { outline: 3px solid #006876; outline-offset: 2px; border-radius: 4px; }
+  .bg-primary :focus-visible, .bg-primary-container :focus-visible { outline-color: #9eefff; }
+  main:focus { outline: none; }
+  summary::-webkit-details-marker { display: none; }
+}
+
+@layer components {
+  .icon { display: inline-block; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+  .skip-link { @apply fixed left-3 top-3 z-[100] -translate-y-24 rounded-xl bg-primary px-4 py-3 font-label-md text-label-md text-on-primary focus:translate-y-0; }
+  .nav-link { @apply px-3 py-2 font-label-md text-label-md text-on-surface-variant rounded-lg transition-colors hover:text-on-surface hover:bg-surface-container-high; }
+  .nav-link[aria-current='page'] { @apply bg-primary-container text-on-primary hover:bg-primary-container hover:text-on-primary; }
+  .field { @apply w-full px-4 py-3 bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm placeholder:text-slate-500 border border-transparent focus:outline-none focus:ring-2 focus:ring-secondary; }
+  .field[aria-invalid='true'] { @apply border-error; }
+  .btn-cta { @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-cta hover:bg-cta-hover text-on-primary font-label-lg text-label-lg rounded-xl shadow-[0_10px_25px_-5px_rgba(255,90,54,0.4)] transition-colors; }
+  .pt-safe { padding-top: env(safe-area-inset-top); }
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+  .scrollbar-none { scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+}
+
+/* --- Animaciones (GSAP) ---------------------------------------------------
+   Estado inicial solo si el usuario no pide movimiento reducido. Si GSAP no llega a cargar
+   (red lenta, bloqueo), el fallback revela todo a los pocos segundos: nunca queda contenido oculto. */
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.gsap-ready) [data-hero] { opacity: 0; animation: reveal-fallback .01s 1.6s forwards; }
+  html:not(.gsap-ready) [data-reveal], html:not(.gsap-ready) [data-stagger] > * { opacity: 0; animation: reveal-fallback .01s 3.5s forwards; }
+  html:not(.gsap-ready) [data-img-reveal] { clip-path: inset(0 0 100% 0); animation: reveal-clip .01s 3.5s forwards; }
+}
+@keyframes reveal-fallback { to { opacity: 1; } }
+@keyframes reveal-clip { to { clip-path: inset(0); } }
+
+@layer components {
+  .legal h2 { @apply font-headline-sm text-headline-sm text-primary mt-8 mb-2; }
+  .legal p, .legal li { @apply font-body-md text-body-md text-on-surface-variant; }
+  .legal p { @apply mt-2; }
+  .legal ul { @apply list-disc pl-6 space-y-1 mt-2; }
+  .legal a { @apply text-secondary underline; }
+  .search-tab-btn { @apply transition-colors text-on-surface-variant hover:bg-surface-container hover:text-on-surface; }
+  .search-tab-btn[aria-pressed='true'] { @apply bg-primary text-on-primary shadow-sm hover:bg-primary hover:text-on-primary; }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .btn-cta { transition-property: color, background-color, transform, box-shadow; transition-duration: .2s; }
+  .btn-cta:hover { transform: translateY(-1px) scale(1.02); box-shadow: 0 8px 20px rgba(214, 58, 26, 0.35); }
+}

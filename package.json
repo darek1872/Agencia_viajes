@@ -1,0 +1,27 @@
+{
+  "name": "web-agencia-de-viajes",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Web de agencia de viajes (diseño de Google Stitch convertido a sitio estático optimizado)",
+  "engines": { "node": ">=18.18" },
+  "scripts": {
+    "dev": "vite",
+    "images": "node scripts/images.mjs",
+    "build": "vite build && node scripts/verify-dist.mjs dist",
+    "preview": "vite preview",
+    "check:launch": "node scripts/verify-dist.mjs dist --strict"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.1.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.1.0",
+    "gsap": "^3.12.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.0"
+  }
+}

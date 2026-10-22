@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- include:head.html -->
+<script type="module" src="/src/main.js"></script>
+</head>
+<body class="min-h-screen">
+<!-- include:header.html -->
+<main id="contenido" tabindex="-1" class="w-full pt-28 bg-surface">
+{{breadcrumb}}
+<article class="max-w-3xl mx-auto px-margin-mobile md:px-margin py-10 lg:py-16 legal">
+  <h1 class="font-headline-lg-mobile text-headline-lg-mobile lg:font-headline-lg lg:text-headline-lg text-primary mb-2">Política de privacidad</h1>
+  <p class="font-body-sm text-body-sm text-on-surface-variant mb-8">Última actualización: [[Fecha]]. Texto base a revisar por un profesional jurídico antes de publicar.</p>
+  <h2>1. Responsable del tratamiento</h2>
+  <ul>
+    <li>Responsable: {{site.legalName}} (CIF/NIF {{site.legal.cif}})</li>
+    <li>Dirección: {{site.addressStreet}}, {{site.postalCode}} {{site.addressLocality}}</li>
+    <li>Contacto para cuestiones de privacidad: <a href="mailto:{{site.legal.dpoEmail}}">{{site.legal.dpoEmail}}</a></li>
+  </ul>
+  <h2>2. Qué datos tratamos y para qué</h2>
+  <ul>
+    <li><strong>Formulario de presupuesto y contacto:</strong> nombre, teléfono, correo y los datos del viaje que nos indiques, para responder a tu solicitud y preparar tu propuesta. Base jurídica: tu consentimiento y la aplicación de medidas precontractuales a petición tuya.</li>
+    <li><strong>Suscripción a novedades:</strong> tu correo electrónico, para enviarte ofertas y novedades. Base jurídica: tu consentimiento, que puedes retirar en cualquier momento.</li>
+  </ul>
+  <h2>3. Destinatarios</h2>
+  <p>Tus datos se comunican únicamente a los proveedores necesarios para prestar el servicio, entre ellos el servicio que recibe los formularios de este sitio ({{site.formProvider}}), que actúa como encargado del tratamiento. [[Otros destinatarios: touroperadores, aerolíneas, aseguradoras, si procede]]</p>
+  <h2>4. Conservación</h2>
+  <p>Conservamos los datos mientras sean necesarios para atender tu solicitud y, después, durante los plazos legales aplicables. [[Plazos concretos de conservación]]</p>
+  <h2>5. Tus derechos</h2>
+  <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <a href="mailto:{{site.legal.dpoEmail}}">{{site.legal.dpoEmail}}</a>. Si consideras que tus derechos no han sido atendidos, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" rel="noopener noreferrer" target="_blank">www.aepd.es</a>).</p>
+</article>
+</main>
+<!-- include:footer.html -->
+</body>
+</html>

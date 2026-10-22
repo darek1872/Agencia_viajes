@@ -1,0 +1,14 @@
+<form class="w-full max-w-md space-y-3" data-form="newsletter" id="form-newsletter" method="post" novalidate>
+  <input type="hidden" name="formulario" value="Suscripción a novedades">
+  <div class="hidden" aria-hidden="true"><label>No rellenar este campo<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+  <div class="flex flex-col sm:flex-row gap-3">
+    <label class="sr-only" for="n-email">Correo electrónico</label>
+    <input class="flex-1 px-4 py-3.5 bg-surface-container-lowest text-on-surface rounded-xl font-body-sm text-body-sm placeholder:text-slate-500 shadow-inner" id="n-email" name="email" type="email" autocomplete="email" required placeholder="Introduce tu correo electrónico">
+    <button class="px-6 py-3.5 bg-cta hover:bg-cta-hover disabled:opacity-60 text-on-primary font-label-md text-label-md font-bold rounded-xl transition-colors shrink-0" type="submit"><span data-submit-label>Suscribirme</span></button>
+  </div>
+  <div class="flex items-start gap-3 text-left">
+    <input class="mt-1 w-5 h-5 shrink-0 accent-secondary" id="n-consent" name="consentimiento" type="checkbox" value="Acepta recibir comunicaciones" required>
+    <label class="font-body-sm text-xs text-slate-200" for="n-consent">Acepto recibir novedades y ofertas por correo y la <a class="underline text-on-primary" href="/privacidad/">política de privacidad</a>. Puedo darme de baja cuando quiera.</label>
+  </div>
+  <div data-form-status class="hidden rounded-xl px-4 py-3 font-body-sm text-body-sm" tabindex="-1"></div>
+</form>

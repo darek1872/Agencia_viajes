@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface": "#f7f9fb", "surface-dim": "#d8dadc", "secondary": "#006876", "on-primary-container": "#778db2", "error-container": "#ffdad6", "tertiary-fixed": "#ffdad2", "on-primary-fixed": "#001c3b", "primary-fixed-dim": "#b1c7f0", "on-tertiary-fixed": "#3d0600", "on-primary": "#ffffff", "on-secondary-fixed": "#001f24", "inverse-surface": "#2d3133", "error": "#ba1a1a", "on-background": "#191c1e", "on-secondary": "#ffffff", "on-error-container": "#93000a", "secondary-fixed-dim": "#77d4e5", "on-primary-fixed-variant": "#314769", "secondary-container": "#92edff", "tertiary": "#270300", "on-tertiary": "#ffffff", "background": "#f7f9fb", "tertiary-fixed-dim": "#ffb4a3", "inverse-primary": "#b1c7f0", "tertiary-container": "#4e0900", "surface-container-highest": "#e0e3e5", "surface-bright": "#f7f9fb", "surface-variant": "#e0e3e5", "surface-tint": "#495f82", "outline-variant": "#c4c6cf", "primary-container": "#0b2545", "inverse-on-surface": "#eff1f3", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#8c1900", "on-surface": "#191c1e", "secondary-fixed": "#9eefff", "outline": "#74777f", "on-surface-variant": "#44474e", "on-secondary-container": "#006d7b", "on-secondary-fixed-variant": "#004e59", "primary": "#001026", "primary-fixed": "#d5e3ff", "surface-container-low": "#f2f4f6", "surface-container-high": "#e6e8ea", "on-tertiary-container": "#f65430", "surface-container": "#eceef0" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "margin-mobile": "1rem", "margin": "2rem", "gutter-mobile": "1rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-sm": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"] }, fontSize: { "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "display-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary-container text-surface px-margin-mobile py-1 flex items-center justify-between text-label-sm font-label-sm"><div class="flex items-center gap-space-sm truncate"><span class="material-symbols-outlined text-[14px] text-secondary-container">support_agent</span><span class="truncate">Asesoramiento personal 7 días</span></div><div class="flex items-center gap-space-sm shrink-0"><a aria-label="Llamar por teléfono" class="flex items-center text-surface hover:text-secondary-container" href="tel:+34900000000"><span class="material-symbols-outlined text-[15px]">call</span></a><a aria-label="WhatsApp" class="flex items-center text-[#25D366]" href="https://wa.me/34600000000" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[15px]">chat</span></a><span class="text-outline-variant/60">|</span><button class="flex items-center gap-0.5 text-surface font-label-sm"><span>ES</span><span class="text-outline-variant/60">/</span><span>€</span></button></div></div><div class="h-20 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Abrir menú" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface active:bg-surface-container"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-tight font-bold">Tu Agencia</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase text-[10px] leading-none">de Viajes</span></div></div><div class="flex items-center gap-space-sm"><a class="h-11 px-3 rounded-xl bg-[#25D366]/10 text-[#075E54] flex items-center gap-1.5 font-label-sm text-label-sm font-semibold active:bg-[#25D366]/20 transition-colors" href="https://wa.me/34600000000" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[20px] text-[#25D366]">chat</span><span class="hidden sm:inline">WhatsApp</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-28 pb-32 bg-surface min-h-[calc(100vh-7rem)]"><div class="flex flex-col w-full">
+<!-- SECCIÓN 3: HERO CON BUSCADOR PRINCIPAL -->
+<section class="relative w-full px-margin-mobile pt-space-md pb-space-lg">
+<!-- Hero Image Card -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-lg min-h-[520px] flex flex-col justify-between p-space-md">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Stunning tropical turquoise lagoon with overwater wooden villas in the Maldives, bright sunny day, ultra clear water, lush green palm trees, cinematic travel photography, crisp vivid colors, luxury travel aesthetic" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6lgU213ZI3-YlY7tRNf7snHieWBItfBC41jZHUo-yzXTWVGh7i6nAs0Ej6vgkDwHn6KpqNKhxHtygfWArPQUAFO-RFN7NMo1tNEIzdZZh1q5UQfLkRaK1APP92Ywr_DSByuseXSvWWilvMVoa6FkO9vJlQD2POqlc73pj-ugXVC5Ewq0IoKbaB45OlbZmuJnuthmWmiKTexeYww7Cc_ryEJG4XiZYccaWCjBxQMPzT_mByjyilK__3Q')">
+</div>
+<!-- Scrim overlay for impeccable legibility -->
+<div class="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/45 to-primary/85"></div>
+<!-- Hero Header Content -->
+<div class="relative z-10 flex flex-col gap-space-xs text-on-primary pt-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/90 text-on-secondary-container text-label-sm font-label-sm w-fit backdrop-blur-md">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Viajes organizados a tu medida</span>
+</div>
+<h1 class="font-display-mobile text-display-mobile text-on-primary leading-tight mt-1">
+          Tu próximo viaje <br/><span class="text-secondary-fixed">empieza aquí</span>
+</h1>
+<p class="font-body-sm text-body-sm text-surface-container-low max-w-sm">
+          Vuelos, hoteles y paquetes de ensueño con asesoramiento exclusivo 24/7 y el mejor precio garantizado.
+        </p>
+</div>
+<!-- Search Box Card -->
+<div class="relative z-10 w-full mt-4 bg-surface-container-lowest rounded-2xl p-space-md shadow-xl flex flex-col gap-space-sm text-on-surface">
+<!-- Interactive Tabs -->
+<div class="flex items-center gap-1 pb-1 overflow-x-auto scrollbar-none" id="search-tabs">
+<button class="search-tab px-3 py-1.5 rounded-xl font-label-sm text-label-sm bg-primary text-on-primary flex items-center gap-1.5 shrink-0" data-tab="paquetes">
+<span class="material-symbols-outlined text-[16px]">luggage</span> Paquetes
+          </button>
+<button class="search-tab px-3 py-1.5 rounded-xl font-label-sm text-label-sm bg-surface-container text-on-surface-variant flex items-center gap-1.5 shrink-0" data-tab="vuelos">
+<span class="material-symbols-outlined text-[16px]">flight</span> Vuelos
+          </button>
+<button class="search-tab px-3 py-1.5 rounded-xl font-label-sm text-label-sm bg-surface-container text-on-surface-variant flex items-center gap-1.5 shrink-0" data-tab="hoteles">
+<span class="material-symbols-outlined text-[16px]">hotel</span> Hoteles
+          </button>
+<button class="search-tab px-3 py-1.5 rounded-xl font-label-sm text-label-sm bg-surface-container text-on-surface-variant flex items-center gap-1.5 shrink-0" data-tab="circuitos">
+<span class="material-symbols-outlined text-[16px]">map</span> Circuitos
+          </button>
+<button class="search-tab px-3 py-1.5 rounded-xl font-label-sm text-label-sm bg-surface-container text-on-surface-variant flex items-center gap-1.5 shrink-0" data-tab="cruceros">
+<span class="material-symbols-outlined text-[16px]">directions_boat</span> Cruceros
+          </button>
+</div>
+<!-- Inputs Grid -->
+<div class="flex flex-col gap-2">
+<!-- Origen -->
+<div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">flight_takeoff</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant text-[10px] uppercase tracking-wider">Origen</span>
+<input class="bg-transparent font-label-md text-label-md text-on-surface outline-none w-full p-0 font-medium" type="text" value="Madrid (MAD)"/>
+</div>
+</div>
+<!-- Destino -->
+<div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">location_on</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant text-[10px] uppercase tracking-wider">Destino</span>
+<input class="bg-transparent font-label-md text-label-md text-on-surface placeholder-outline outline-none w-full p-0 font-medium" placeholder="Ej. Riviera Maya, Bali, Tokio..." type="text"/>
+</div>
+</div>
+<!-- Fechas & Viajeros -->
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">calendar_month</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant text-[10px] uppercase tracking-wider">Fechas</span>
+<span class="font-label-md text-label-md text-on-surface truncate font-medium">12 - 20 Jul</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">group</span>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant text-[10px] uppercase tracking-wider">Viajeros</span>
+<span class="font-label-md text-label-md text-on-surface truncate font-medium">2 adultos</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Coral CTA -->
+<button class="w-full h-12 bg-on-tertiary-container text-on-tertiary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(246,84,48,0.35)] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span>Buscar viajes</span>
+</button>
+<a class="flex items-center justify-center gap-1 text-center font-label-sm text-label-sm text-secondary hover:text-primary transition-colors py-0.5" href="#viaje-a-medida">
+<span>¿No sabes dónde ir? Te ayudamos</span>
+<span class="text-sm">✨</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 4: FRANJA DE CONFIANZA Y CERTIFICACIONES -->
+<section class="w-full bg-surface-container-lowest py-space-md px-margin-mobile shadow-sm">
+<div class="grid grid-cols-2 gap-3 mb-space-sm">
+<div class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">security</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold leading-tight">Pago 100% seguro</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Encriptación SSL 256-bit</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">event_available</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold leading-tight">Cancelación flexible</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Opciones sin gastos</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold leading-tight">Atención 24/7</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Durante todo tu viaje</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">loyalty</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-bold leading-tight">Mejor precio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Tarifas negociadas</span>
+</div>
+</div>
+</div>
+<!-- Logos de Confianza y Aerolíneas -->
+<div class="flex items-center justify-between gap-2 pt-2 border-t border-surface-container overflow-x-auto scrollbar-none opacity-80">
+<span class="font-label-sm text-label-sm text-outline tracking-wider font-semibold uppercase text-[10px]">Garantía oficial:</span>
+<div class="flex items-center gap-3 shrink-0">
+<span class="font-label-sm text-label-sm font-bold text-primary-container px-2 py-0.5 rounded bg-surface-container">IATA</span>
+<span class="font-label-sm text-label-sm font-bold text-primary-container px-2 py-0.5 rounded bg-surface-container">CEAV</span>
+<span class="font-label-sm text-label-sm font-bold text-primary-container px-2 py-0.5 rounded bg-surface-container">IBERIA</span>
+<span class="font-label-sm text-label-sm font-bold text-primary-container px-2 py-0.5 rounded bg-surface-container">EMIRATES</span>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 5: OFERTAS DESTACADAS (Urgencia & Escasez) -->
+<section class="w-full px-margin-mobile py-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-on-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Plazas Limitadas</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">Ofertas Flash</h2>
+</div>
+<a class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-0.5" href="#todas-ofertas">
+        Ver todas <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Carrusel Horizontal de Ofertas -->
+<div class="flex gap-space-sm overflow-x-auto pb-2 -mx-margin-mobile px-margin-mobile scrollbar-none snap-x snap-mandatory">
+<!-- Oferta 1: Tailandia -->
+<div class="min-w-[285px] max-w-[285px] bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md flex flex-col snap-start shrink-0">
+<div class="relative w-full h-44">
+<div class="w-full h-full bg-cover bg-center" data-alt="Longtail wooden boat anchored in emerald crystal waters of Krabi Thailand with towering karst limestone cliffs in warm sunset illumination, serene tropical beach" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARDI__rBlcrgxiD1y8WXBjv8Wxzy3P-FDkTqdZVBxOvKdlzSQzdvb-0nxuNDMsNzYzkyr4mxZQoQPca51142KqfkaEFO4RYO9_8-sR_vJdCHbo4eCHRu5Mixu4a5V-n09wIgoidKAhFAUswH9NxO0BRRGoYdsgpYFIDoe1xr3Zyw-wvKbOdjKY3w7PuPmfOlB4N-k8yLkom0_48ELLW-OaEx9LU0HYa2OdfyDe3fMm-38WZ04YzjaKpg')">
+</div>
+<div class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 11 Días
+          </div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold shadow-sm">
+            -20%
+          </div>
+<div class="absolute bottom-2 left-2.5 px-2 py-0.5 rounded-md bg-error-container text-on-error-container font-label-sm text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">alarm</span> ¡Últimas 3 plazas!
+          </div>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-3">
+<div>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">flight_takeoff</span> Vuelos + 5* + Excursiones
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 line-clamp-1">Tailandia Mágico &amp; Krabi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] line-clamp-2 mt-0.5">Bangkok tradicional, templos dorados y descanso en islas paradisíacas.</p>
+</div>
+<div class="pt-2 border-t border-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[11px] text-outline line-through font-medium">1.550 €</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">1.240 €<span class="text-body-sm text-outline font-normal text-[11px]">/pers</span></span>
+</div>
+<div class="text-[10px] bg-tertiary-fixed text-on-tertiary-fixed px-2 py-1 rounded font-mono font-semibold">
+                ⏳ 04h 28m 15s
+              </div>
+</div>
+<button class="w-full h-10 bg-on-tertiary-container text-on-tertiary font-label-md text-label-md rounded-xl flex items-center justify-center gap-1 shadow-[0_4px_12px_rgba(246,84,48,0.25)] active:scale-95 transition-transform">
+<span>Ver oferta</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Oferta 2: Riviera Maya -->
+<div class="min-w-[285px] max-w-[285px] bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md flex flex-col snap-start shrink-0">
+<div class="relative w-full h-44">
+<div class="w-full h-full bg-cover bg-center" data-alt="Luxury infinity pool at 5-star beachfront all-inclusive resort overlooking turquoise Mexican Caribbean sea with lounge chairs and white umbrellas, daylight" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdWRKlh67xPhAclkzLgQCoTWKdFqhrxEJkOcGeRSnANybMLJZ3uKDx0IHsEnSlLQh6PDZJp65I8zwR7G07fZPnYnLAraaLyxxoYr4EbfqhA3E32bMCKUX2Ktvds_VJQHibWZTlikNt8H11VWqPsTIMpcmkCiGJmbfO4G9PTRgK3IX4gRKL2IX5T3HyWFZT9HyJjC7_X5Dfa1uLttRm8Ow_rN1ooRrkFNhrRb4JliwHdDl9CXCd0A0EIQ')">
+</div>
+<div class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 9 Días
+          </div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-on-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold shadow-sm">
+            -15%
+          </div>
+<div class="absolute bottom-2 left-2.5 px-2 py-0.5 rounded-md bg-error-container text-on-error-container font-label-sm text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">alarm</span> Quedan 2 plazas
+          </div>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-3">
+<div>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span> Todo Incluido Luxury 5*
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 line-clamp-1">Riviera Maya Exclusiva</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] line-clamp-2 mt-0.5">Vuelo directo, traslados privados, cena gourmet y cenotes sagrados.</p>
+</div>
+<div class="pt-2 border-t border-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[11px] text-outline line-through font-medium">1.150 €</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">980 €<span class="text-body-sm text-outline font-normal text-[11px]">/pers</span></span>
+</div>
+<div class="text-[10px] bg-secondary-container text-on-secondary-container px-2 py-1 rounded font-semibold">
+                Playa &amp; Relax
+              </div>
+</div>
+<button class="w-full h-10 bg-on-tertiary-container text-on-tertiary font-label-md text-label-md rounded-xl flex items-center justify-center gap-1 shadow-[0_4px_12px_rgba(246,84,48,0.25)] active:scale-95 transition-transform">
+<span>Ver oferta</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Oferta 3: Kenia & Zanzíbar -->
+<div class="min-w-[285px] max-w-[285px] bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md flex flex-col snap-start shrink-0">
+<div class="relative w-full h-44">
+<div class="w-full h-full bg-cover bg-center" data-alt="Lion family resting under acacia tree in Kenyan savannah during golden sunrise, with Mount Kilimanjaro in misty distant background, high resolution safari photograph" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFKhJSA3RoHgO252B-CaTPgutUqXhFIuVhnzM5nbPj9jI-fhDUsiOBqkFdkim1mSgLGXCq2CwrFjL-LTcfX0RlVQkzMU3-ZU1OlI9VUvkgjEZRS-uOaUlB2KvyyqJ3p4F-OTOUxsMqPnpRsUsbE06XtCZTKid63jC2gAFB1lMVO7AVi7UYSWQVBghNMgHD2_vjU9ymnaA25gU3nfdBRDAvIiF6ClO2n3OX-6J-fC1p4o7oY6HghKQ5iA')">
+</div>
+<div class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 10 Días
+          </div>
+<div class="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">
+            Super Promo
+          </div>
+<div class="absolute bottom-2 left-2.5 px-2 py-0.5 rounded-md bg-surface-container-lowest/90 text-primary font-label-sm text-[11px] font-semibold">
+            Safari 4x4 + Playa
+          </div>
+</div>
+<div class="p-space-sm flex flex-col flex-1 justify-between gap-3">
+<div>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">star</span> Safari Masai Mara + Zanzíbar
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 line-clamp-1">Safari Kenia &amp; Zanzíbar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] line-clamp-2 mt-0.5">La gran migración africana y aguas cristalinas en el océano Índico.</p>
+</div>
+<div class="pt-2 border-t border-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[11px] text-outline line-through font-medium">2.250 €</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">1.890 €<span class="text-body-sm text-outline font-normal text-[11px]">/pers</span></span>
+</div>
+<div class="text-[10px] bg-tertiary-fixed text-on-tertiary-fixed px-2 py-1 rounded font-mono font-semibold">
+                ⏳ 12h 10m
+              </div>
+</div>
+<button class="w-full h-10 bg-on-tertiary-container text-on-tertiary font-label-md text-label-md rounded-xl flex items-center justify-center gap-1 shadow-[0_4px_12px_rgba(246,84,48,0.25)] active:scale-95 transition-transform">
+<span>Ver oferta</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 6: DESTINOS POPULARES -->
+<section class="w-full bg-surface-container-low py-space-lg px-margin-mobile">
+<div class="flex flex-col gap-1 mb-space-md">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Inspiración Global</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">Destinos Populares</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Selecciones cuidadas con la mejor relación calidad-experiencia.</p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Destino 1: Caribe -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm bg-surface-container-lowest flex flex-col">
+<div class="relative h-28 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Exotic white sand beach with leaning palm tree and crystal turquoise waves crashing softly in Dominican Republic Punta Cana, tropical travel paradise" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBf70lY_LSNEQDg_omuhMlg3DzEf1Vt43-gvFmdEc0xdlthgGNUfK87t9tRDs-IQX-SDFkD-xKuyWMlcL5tl426_yq5FRTTRc4paPoNyOdrEIlxqU0y8OjoUjOkxuqM3Ela0d7mmbJ9iHkWIsOEopBu8pi-98uhm98vrGf5lNp7WF9Oyzt6x9ucFy690lgR7Gi9c1miSznNLs_Nmy0DWATYYgsKzC9Eo-1hnzupzsifxwPC_0nEdqgF5A')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-2 text-on-primary font-headline-sm text-[16px] font-bold leading-tight">Caribe</span>
+</div>
+<div class="p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant">Desde</span>
+<span class="font-label-lg text-label-lg font-bold text-secondary">890 €</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">arrow_forward</span>
+</div>
+</div>
+<!-- Destino 2: Europa -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm bg-surface-container-lowest flex flex-col">
+<div class="relative h-28 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Colosseum in Rome at sunrise with cobblestone street and blooming pink bougainvillea in the foreground, soft Italian morning golden hour light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJukI0MNMr1Vdha1yaDUnG_P-S0EGhep9NbuPlj542qufWwDaRWiwEAtPwfNgxZA_iubjiVpJIq_65ANPatIballXLxVDWGmwwfLyFCqzGwaIWTSAf6yM0XyGFp1KoZ-ZOGvwtpMBPJxDeCFcGRwvJr6kyrinNGHJuBZJexxlIXqk8pJacsrGia31tzEsRFcicIgJl7fJf91h1Eh-ggmsU61-6NPFSIBPOWxCC9j_DqDwnWDmUrxArsQ')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-2 text-on-primary font-headline-sm text-[16px] font-bold leading-tight">Europa</span>
+</div>
+<div class="p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant">Desde</span>
+<span class="font-label-lg text-label-lg font-bold text-secondary">180 €</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">arrow_forward</span>
+</div>
+</div>
+<!-- Destino 3: Asia -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm bg-surface-container-lowest flex flex-col">
+<div class="relative h-28 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Red traditional torii gates path at Fushimi Inari shrine in Kyoto surrounded by lush bamboo forest, soft daylight filtering through leaves" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-QbdNMpnpUPPNT6dUffyrdGCKFVy_Kr78cl0rw3aU3O2y8YY_Co4KY9dscGbvCM0VAospgTBOIVBRYN5vIPfXZIAvOwIHd30eueYTgAsZLBUNtFH29X4pqDafqMcYr6NzZyiLgU0v6mClMc3ZssI15bfeDmuIWg-euYv9uB81yQZfOpzsc5xCn8lLAPZRAIsAZczRv0r_An-7koC7aCyk9aP-ib1pUFW0MJaV2cy5SM98Mb1qc0-M8w')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-2 text-on-primary font-headline-sm text-[16px] font-bold leading-tight">Asia</span>
+</div>
+<div class="p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant">Desde</span>
+<span class="font-label-lg text-label-lg font-bold text-secondary">950 €</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">arrow_forward</span>
+</div>
+</div>
+<!-- Destino 4: Escapadas Urbanas -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm bg-surface-container-lowest flex flex-col">
+<div class="relative h-28 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Iconic view of Eiffel Tower in Paris seen from Pont de Bir-Hakeim with vintage street lamp, soft romantic European afternoon light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvOTJ_T60thIg2iTWrffndMXLz9HmveHWXm4gpnwyxbjhT6YiRLOn3lAwYzNzGe5yyEfmqbVsPlfyGScF-l-Fq2_yDhBvhqPbsJkCGou2QTjj2TM1TL7AAkfiEWcYUPEsIGv6beh-MM40FaqW1k8VFtdNSXNd6OB7ZCtmVmMy_Eob6Ue1TGtdBVkLHaoiTRhZNZRvYMoIzgUCHrwg1KrzigxNbCCXkodtIfCzf2-8wx6_9MaLp_3GfsA')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-2 text-on-primary font-headline-sm text-[16px] font-bold leading-tight">Escapadas</span>
+</div>
+<div class="p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant">Desde</span>
+<span class="font-label-lg text-label-lg font-bold text-secondary">120 €</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">arrow_forward</span>
+</div>
+</div>
+<!-- Destino 5: Playas Paradisíacas -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm bg-surface-container-lowest flex flex-col">
+<div class="relative h-28 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Cala Macarelleta Menorca Spain crystal clear calm turquoise cove with sailboats floating as if in air, surrounded by pine clad cliffs" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDeq26uUVlLuyNf7TICMKDqynUNo0KDcCxO6pq9wCI7-WPrgwbluNjNodK2wJhh7ACtk-at2JGPLqnmLLTzkQ6mxQ3BP0XlMCWakGDkSXObz_BjYBF0380FUohis_zqhueI1EXR-_9jfD4UZptQ5mgSKgA17ATaNsGThyJ0d12bSVAI7u9DDKTABUlHPe2ZvIaaA0ab7-QZDhSw2gnvy3ISP74QkRQnahdIX96Xk04tpAXerGb-VYxAWA')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-2 text-on-primary font-headline-sm text-[16px] font-bold leading-tight">Islas &amp; Playas</span>
+</div>
+<div class="p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant">Desde</span>
+<span class="font-label-lg text-label-lg font-bold text-secondary">450 €</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">arrow_forward</span>
+</div>
+</div>
+<!-- Destino 6: Montaña y Naturaleza -->
+<div class="group relative rounded-2xl overflow-hidden shadow-sm bg-surface-container-lowest flex flex-col">
+<div class="relative h-28 w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Majestic Swiss Alps landscape with wooden alpine chalet, emerald green meadow with wildflowers, snowcapped peaks reflecting in small alpine lake" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzZ9JyCHaXk8AOaD65BNQ1EHYwnpL0gG0ivS0fC1_r__i5aj9zjE99ZDhL_qW48Cg5aGeoF79l02f-CT0_gypRhbXJNkuf4PgJeCagyGqCG-patEJfBSEX07EdptlqT5X8rLnm3pDNcFK68ENlD5Hl19eb6ZCEgz8Om-pnvsRj3n5IKI8grnG6WE5SMfrSFUb95BWVFuWJLz8VkxjniD-3f01ZY3NcWmS8LepQzTe9FPP3S3y2vLCJkQ')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-2 text-on-primary font-headline-sm text-[16px] font-bold leading-tight">Naturaleza</span>
+</div>
+<div class="p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant">Desde</span>
+<span class="font-label-lg text-label-lg font-bold text-secondary">220 €</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 7: INSPÍRATE POR TIPO DE VIAJE -->
+<section class="w-full px-margin-mobile py-space-lg flex flex-col gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Estilo de Experiencia</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">¿Cómo quieres viajar?</h2>
+</div>
+<!-- Chips / Grid de Tipos de Viaje -->
+<div class="grid grid-cols-2 gap-2.5">
+<button class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest shadow-sm text-left active:bg-surface-container">
+<div class="w-9 h-9 rounded-lg bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary leading-tight">Luna de miel</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Romance &amp; exclusividad</span>
+</div>
+</button>
+<button class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest shadow-sm text-left active:bg-surface-container">
+<div class="w-9 h-9 rounded-lg bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">family_restroom</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary leading-tight">En familia</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Diversión para todos</span>
+</div>
+</button>
+<button class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest shadow-sm text-left active:bg-surface-container">
+<div class="w-9 h-9 rounded-lg bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">hiking</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary leading-tight">Aventura</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Trekking y adrenalina</span>
+</div>
+</button>
+<button class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest shadow-sm text-left active:bg-surface-container">
+<div class="w-9 h-9 rounded-lg bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">diamond</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary leading-tight">Viajes de Lujo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Servicio 5 estrellas</span>
+</div>
+</button>
+<button class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest shadow-sm text-left active:bg-surface-container">
+<div class="w-9 h-9 rounded-lg bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary leading-tight">Grupos &amp; Amigos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Tarifas especiales</span>
+</div>
+</button>
+<button class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-lowest shadow-sm text-left active:bg-surface-container">
+<div class="w-9 h-9 rounded-lg bg-secondary-container/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">weekend</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary leading-tight">Escapadas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Fin de semana express</span>
+</div>
+</button>
+</div>
+</section>
+<!-- SECCIÓN 8: POR QUÉ ELEGIRNOS (Agencia vs Por tu cuenta) -->
+<section class="w-full bg-primary-container text-surface px-margin-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col text-center">
+<span class="font-label-sm text-label-sm text-secondary-container font-bold uppercase tracking-wider">Tu Tranquilidad Primero</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-surface font-bold mt-1">¿Por qué viajar con nosotros?</h2>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-1">Hacerlo por tu cuenta parece fácil... hasta que surge un imprevisto.</p>
+</div>
+<!-- Comparativa Cards -->
+<div class="flex flex-col gap-3">
+<div class="bg-surface rounded-2xl p-space-md text-on-surface shadow-md">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">person_pin</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-[17px] font-bold text-primary">Asesor personal con nombre y apellidos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Sin bots automáticos ni centrales telefónicas impersonales. Una persona experta dedicada a diseñar tu itinerario.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface rounded-2xl p-space-md text-on-surface shadow-md">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-[17px] font-bold text-primary">Respaldo total ante cancelaciones o retrasos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Si una aerolínea cancela o hay una huelga, nosotros gestionamos alternativas de inmediato mientras tú disfrutas.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface rounded-2xl p-space-md text-on-surface shadow-md">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">price_check</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-[17px] font-bold text-primary">Tarifas mayoristas y extras incluidos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Precios cerrados sin costes ocultos, con upgrades de habitación, seguro médico top y traslados privados.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Directo -->
+<a class="w-full h-12 bg-on-tertiary-container text-on-tertiary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(246,84,48,0.35)] active:scale-95 transition-transform mt-1" href="https://wa.me/34600000000" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Habla con un asesor por WhatsApp</span>
+</a>
+</section>
+<!-- SECCIÓN 9: CÓMO FUNCIONA (Proceso en 4 pasos numerados) -->
+<section class="w-full px-margin-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Facilidad Total</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">Tu viaje en 4 simples pasos</h2>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Paso 1 -->
+<div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm text-[18px] font-bold shrink-0">
+          1
+        </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] font-bold text-primary">Cuéntanos tu viaje ideal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">Destino, fechas deseadas, preferencias y presupuesto aproximado.</span>
+</div>
+</div>
+<!-- Paso 2 -->
+<div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-headline-sm text-[18px] font-bold shrink-0">
+          2
+        </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] font-bold text-primary">Propuesta personalizada en &lt;24h</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">Itinerario completo con hoteles seleccionados y vuelos idóneos.</span>
+</div>
+</div>
+<!-- Paso 3 -->
+<div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-headline-sm text-[18px] font-bold shrink-0">
+          3
+        </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] font-bold text-primary">Reserva flexible y segura</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">Paga solo una pequeña señal y fracciona el resto cómodamente.</span>
+</div>
+</div>
+<!-- Paso 4 -->
+<div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-full bg-on-tertiary-container text-on-tertiary flex items-center justify-center font-headline-sm text-[18px] font-bold shrink-0">
+          4
+        </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[16px] font-bold text-primary">Viaja tranquilo con respaldo 24/7</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">Tu asesor te acompaña durante toda la estancia para lo que necesites.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 13 (COLOCADA ESTRATÉGICAMENTE): CUENTA ATRÁS Y CAMPAÑA ESTACIONAL -->
+<section class="w-full px-margin-mobile py-2">
+<div class="relative w-full rounded-2xl overflow-hidden bg-gradient-to-r from-primary to-primary-container p-space-md text-surface flex flex-col gap-3 shadow-lg">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-on-tertiary-container text-on-tertiary font-label-sm text-[11px] font-bold uppercase tracking-wider">
+          Campaña Verano 2025
+        </span>
+<span class="font-label-sm text-label-sm text-secondary-container font-semibold">¡Ahorra 150€ extra!</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm font-bold text-surface">Especial Viajes de Verano &amp; Puentes</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container text-[13px] mt-0.5">Reserva antes de que termine el plazo y obtén seguro prémium de anulación gratuito.</p>
+</div>
+<!-- Reloj Cuenta Atrás -->
+<div class="grid grid-cols-4 gap-2 text-center py-1">
+<div class="bg-surface/10 rounded-xl py-2 flex flex-col backdrop-blur-sm">
+<span class="font-headline-sm text-[20px] font-bold text-surface">02</span>
+<span class="text-[10px] text-surface-container uppercase tracking-wider font-medium">Días</span>
+</div>
+<div class="bg-surface/10 rounded-xl py-2 flex flex-col backdrop-blur-sm">
+<span class="font-headline-sm text-[20px] font-bold text-surface">14</span>
+<span class="text-[10px] text-surface-container uppercase tracking-wider font-medium">Horas</span>
+</div>
+<div class="bg-surface/10 rounded-xl py-2 flex flex-col backdrop-blur-sm">
+<span class="font-headline-sm text-[20px] font-bold text-surface">36</span>
+<span class="text-[10px] text-surface-container uppercase tracking-wider font-medium">Min</span>
+</div>
+<div class="bg-surface/10 rounded-xl py-2 flex flex-col backdrop-blur-sm">
+<span class="font-headline-sm text-[20px] font-bold text-on-tertiary-container">48</span>
+<span class="text-[10px] text-surface-container uppercase tracking-wider font-medium">Seg</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 10: FORMULARIO "VIAJE A MEDIDA" (Bloque de Alta Conversión) -->
+<section class="w-full px-margin-mobile py-space-lg" id="viaje-a-medida">
+<div class="w-full bg-surface-container-lowest rounded-2xl p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex flex-col">
+<div class="inline-flex items-center gap-1.5 text-secondary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">edit_note</span> Sin compromiso
+        </div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold mt-0.5">Diseñamos tu viaje a medida</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Completa estos datos básicos y un asesor especialista se pondrá en contacto contigo con tu presupuesto detallado.</p>
+</div>
+<form class="flex flex-col gap-3 mt-1" onsubmit="event.preventDefault(); alert('¡Gracias! Un asesor te contactará en menos de 24 horas.');">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-primary font-semibold">¿Dónde sueñas viajar?</label>
+<div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">explore</span>
+<input class="bg-transparent font-body-md text-body-md text-on-surface placeholder-outline outline-none w-full p-0" placeholder="Ej. Japón, Costa Rica, Crucero Fiordos..." required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-primary font-semibold">Fechas estimadas</label>
+<div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">date_range</span>
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder-outline outline-none w-full p-0" placeholder="Ej. Agosto 2025" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-primary font-semibold">Viajeros</label>
+<div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">people</span>
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder-outline outline-none w-full p-0" placeholder="Ej. 2 adultos" type="text"/>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-primary font-semibold">Presupuesto orientativo por persona</label>
+<div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">euro</span>
+<select class="bg-transparent font-body-md text-body-md text-on-surface outline-none w-full p-0">
+<option>Menos de 800 €</option>
+<option selected="">800 € - 1.500 €</option>
+<option>1.500 € - 3.000 €</option>
+<option>Más de 3.000 €</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-primary font-semibold">Tu nombre y apellidos</label>
+<div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">person</span>
+<input class="bg-transparent font-body-md text-body-md text-on-surface placeholder-outline outline-none w-full p-0" placeholder="Ej. Carlos Martínez" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-primary font-semibold">Teléfono</label>
+<div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">call</span>
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder-outline outline-none w-full p-0" placeholder="600 000 000" required="" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-primary font-semibold">Email</label>
+<div class="bg-surface-container-low rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">mail</span>
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder-outline outline-none w-full p-0" placeholder="tu@email.com" required="" type="email"/>
+</div>
+</div>
+</div>
+<button class="w-full h-12 bg-on-tertiary-container text-on-tertiary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(246,84,48,0.35)] active:scale-95 transition-transform mt-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Recibir mi propuesta gratis</span>
+</button>
+<p class="font-body-sm text-body-sm text-outline text-[12px] text-center flex items-center justify-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">lock</span>
+<span>Respuesta en &lt;24 horas, 100% sin compromiso ni spam.</span>
+</p>
+</form>
+</div>
+</section>
+<!-- SECCIÓN 11: OPINIONES DE CLIENTES (Prueba Social y Reseñas) -->
+<section class="w-full bg-surface-container-low py-space-lg px-margin-mobile flex flex-col gap-space-md">
+<div class="flex flex-col text-center items-center">
+<div class="inline-flex items-center gap-1 text-on-tertiary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold mt-1">4.9 / 5 de valoración real</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Más de 2.400 clientes han viajado con nosotros con total tranquilidad.</p>
+<div class="flex items-center gap-3 mt-2">
+<span class="font-label-sm text-label-sm font-bold text-primary bg-surface-container-lowest px-3 py-1 rounded-full shadow-sm flex items-center gap-1">
+<span class="text-secondary font-bold">G</span> Google Reviews 4.9★
+        </span>
+<span class="font-label-sm text-label-sm font-bold text-primary bg-surface-container-lowest px-3 py-1 rounded-full shadow-sm flex items-center gap-1">
+<span class="text-secondary font-bold">●●</span> TripAdvisor Travellers' Choice
+        </span>
+</div>
+</div>
+<!-- Carrusel de Testimonios -->
+<div class="flex flex-col gap-3">
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-on-secondary-fixed">
+              LM
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[15px] font-bold text-primary leading-tight">Laura &amp; Miguel</span>
+<span class="font-body-sm text-body-sm text-outline text-[12px]">Luna de miel en Maldivas &amp; Dubái</span>
+</div>
+</div>
+<span class="text-on-tertiary-container font-label-sm text-label-sm">★★★★★</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic text-[14px]">
+          "Insuperable. Tuvimos un retraso en la escala y nuestro asesor nos reubicó antes siquiera de que aterrizáramos. Los hoteles fueron espectaculares. Ya estamos planificando el próximo viaje."
+        </p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container">
+              JG
+            </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[15px] font-bold text-primary leading-tight">Javier Gómez y familia</span>
+<span class="font-body-sm text-body-sm text-outline text-[12px]">Viaje a Riviera Maya con niños</span>
+</div>
+</div>
+<span class="text-on-tertiary-container font-label-sm text-label-sm">★★★★★</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic text-[14px]">
+          "El resort recomendado era perfecto para los peques y con atención de 10 para los mayores. El precio con todo incluido fue bastante más barato que haciéndolo por internet por libre."
+        </p>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 12: GALERÍA "VIAJEROS REALES" (#ViajerosTuAgencia) -->
+<section class="w-full px-margin-mobile py-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Comunidad</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">#ViajerosTuAgencia</h2>
+</div>
+<a class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-0.5" href="https://instagram.com" rel="noopener" target="_blank">
+        @tuagencia.es
+      </a>
+</div>
+<!-- Mosaico Instagram -->
+<div class="grid grid-cols-3 gap-2">
+<div class="relative aspect-square rounded-xl overflow-hidden shadow-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="Happy young couple smiling and taking selfie at traditional Japanese shrine in Kyoto with cherry blossom petals falling, soft daylight photography" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXW7fKAFgKoRb97bhAJaxDqX3DMP0so-cwtyYFHfJJGcCsnlZTtkXxuRA_nGqLXrGuPaYtgc7PXLbFJerE-I0ZvXRP9v1do3Re12oVuO0nCfVN3XTGI23jvOSkGWxyQQaA8KGxbixXibkUvV89SgoJTMMaw06UlufLJyYP4unNTbvMPnraWZxZ0YO3fFgOHF35vbssYSec6jUeG5sdBFFyhk_UhcLBuUUjaaz4XvJTX-q7iLKBkKu5Cw')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent flex items-end p-1.5">
+<span class="text-[10px] text-on-primary font-medium truncate">@alicia_viaja</span>
+</div>
+</div>
+<div class="relative aspect-square rounded-xl overflow-hidden shadow-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="Solo female traveler standing on viewpoint overlooking Positano colorful cliffside village Amalfi Coast Italy, bright sunny Mediterranean summer day" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEAWMVE654CAtPRecu9b3zloYtdXk9-0CX8Hr_0QYySxkDLxMR9aCyuKSX9VoizS1d2qUA5oAXT0RW9hgXbk_i-jWAgGnFkJ1HvRe2D6D-TCRSBIJZJvV7nk4RThkXShUxNHCR8Ll9ItAEo1m1t-wk3E3MBZ0a96tCRVDez0ASEnPS2CuHUmhOp2nWoyxiCs49RfqRr68wNS6ZZbTmVOOCJG950Pg7QjrvgKp768pL-Sb-fsMf7r0YLQ')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent flex items-end p-1.5">
+<span class="text-[10px] text-on-primary font-medium truncate">@marta.wander</span>
+</div>
+</div>
+<div class="relative aspect-square rounded-xl overflow-hidden shadow-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="Two friends laughing in front of Brooklyn Bridge New York at golden sunset hour holding warm coffees, urban adventure candid photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdG2mVxa6QvN1kYVybXL4TYCdalwWvgGs85dhHuyedn5AY81JjcFMjTCzW_iA8bRl_RA6zrF_yX9FcKA7p3vUjdFd1S9flMunXhdvSLqzVkXWkqrYM3EWkNcmh1Fn-Q1fyvmR9EP9dbAyPj76nocmgae6SdwcRzOib6kQx8xhOzbqSKAI7wENq-5yiza0SlMsqWl40_vPdvis9YUzaUzhJ2d2s8Jwv27uq51o5RljtWBELX-QKlTu9dA')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent flex items-end p-1.5">
+<span class="text-[10px] text-on-primary font-medium truncate">@pablo_nyc</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 14: BLOG E INSPIRACIÓN -->
+<section class="w-full bg-surface-container-low py-space-lg px-margin-mobile flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Blog de Viajes</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">Guías &amp; Consejos</h2>
+</div>
+<a class="font-label-sm text-label-sm text-secondary font-semibold" href="#blog">Ver blog</a>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Artículo 1 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm flex items-center p-2.5 gap-3">
+<div class="w-24 h-24 rounded-xl overflow-hidden shrink-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="Mount Fuji framed by blooming cherry blossoms and traditional pagoda Chureito in Japan during spring morning, clear blue sky" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQyyZiKSEGvD6SbY_9hRJUtBFalksvYGdhM_ztvlCVSBlJe-9mrjYS73afNM0KR51l0hcManMdjJobDcOtUCnTldXEByzZuVoQLzCiUBcX6IotGkx1gYbYL_f7CEyBzlgTNPoWnT1zhOmyNMDuQSlaKdmGTdNdb5lQlTBV5iYMw_NSApw7qMWe9qfHeafzYJX7bAq-_v3Wxc30CA15xbxB_bvuBaKRLU4cRdBv8OxVyIPrIhzsK_vTrg')">
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="text-[11px] font-semibold text-secondary uppercase">Guía de Destino</span>
+<h3 class="font-headline-sm text-[15px] font-bold text-primary line-clamp-2 leading-snug mt-0.5">10 cosas imprescindibles que no te puedes perder en Japón</h3>
+<span class="text-[12px] text-outline mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span> 5 min lectura
+          </span>
+</div>
+</article>
+<!-- Artículo 2 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm flex items-center p-2.5 gap-3">
+<div class="w-24 h-24 rounded-xl overflow-hidden shrink-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="Romantic seaside dining table with candles and tropical floral arrangement on private sandy beach under sunset in the Caribbean" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6YoOZ2kkzJvjf7jJdtdpniPIjcVq__hKyr0IDSv18gFBDSIRkMRHb5YtAVODBM3vfjyBGjXS6fIT1lWlGrbyeMYe1ZnkC5RBOSAZZCm0DOQHuQESkvJtuZVUmUJjlhzgXpGIYijasd-OLXRR_lshJDrtk1OorYn__UtRLJWUNlunD0Y8imu1nzbROlWDp6DvZbljNs5rLV6HdlUZIeOpdS3wK1zOVGKQu8XKy0DwZHbUoszgTusvN4A')">
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="text-[11px] font-semibold text-secondary uppercase">Parejas &amp; Romance</span>
+<h3 class="font-headline-sm text-[15px] font-bold text-primary line-clamp-2 leading-snug mt-0.5">Las mejores islas del Caribe para una escapada romántica</h3>
+<span class="text-[12px] text-outline mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span> 4 min lectura
+          </span>
+</div>
+</article>
+<!-- Artículo 3 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm flex items-center p-2.5 gap-3">
+<div class="w-24 h-24 rounded-xl overflow-hidden shrink-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="Neatly packed travel suitcase with passport, camera, sunglasses, rolled clothing and travel accessories arranged cleanly on wooden floor" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCr0OZ9VYzccX1thrYwnjALdOLXmlDyKjqHoLSTgifi_24EcOD4iuLFygk_ObjDAl_KZTJT6n-mXPXL8RVnT7z7iZGVOmHBwzGCN6yuKzc-ZdVKQLz0XCo6b1EG45c8ZrDFkyf4sqBPa5NjozVQWYt2EwstPbBn0ED42NvIZqoUVmk4AsLTmf_m0HAdQjNVKPFSh-VqClIXL2Jjv4ELEFvE-4ROsueK0wlT1ig7QK2cs1KTP7ppoyaedQ')">
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="text-[11px] font-semibold text-secondary uppercase">Consejos Prácticos</span>
+<h3 class="font-headline-sm text-[15px] font-bold text-primary line-clamp-2 leading-snug mt-0.5">La maleta perfecta: checklist definitivo para no olvidar nada</h3>
+<span class="text-[12px] text-outline mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">schedule</span> 3 min lectura
+          </span>
+</div>
+</article>
+</div>
+</section>
+<!-- SECCIÓN 15: PREGUNTAS FRECUENTES (FAQ Acordeones Interactivos) -->
+<section class="w-full px-margin-mobile py-space-lg flex flex-col gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Dudas Frecuentes</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">Todo lo que necesitas saber</h2>
+</div>
+<div class="flex flex-col gap-2.5" id="faq-accordion">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col">
+<button class="faq-btn flex items-center justify-between text-left w-full py-1" onclick="this.parentElement.querySelector('.faq-content').classList.toggle('hidden'); this.querySelector('.faq-icon').classList.toggle('rotate-180');">
+<span class="font-headline-sm text-[15px] font-bold text-primary">¿Cómo funcionan los pagos y el fraccionamiento?</span>
+<span class="material-symbols-outlined text-secondary faq-icon transition-transform">expand_more</span>
+</button>
+<div class="faq-content font-body-sm text-body-sm text-on-surface-variant pt-2 border-t border-surface-container mt-2">
+          Para confirmar tu reserva únicamente abonas una pequeña señal (habitualmente entre el 15% y 25%). El importe restante puedes fraccionarlo en cuotas sin intereses o liquidarlo hasta 20 días antes de la fecha de salida.
+        </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col">
+<button class="faq-btn flex items-center justify-between text-left w-full py-1" onclick="this.parentElement.querySelector('.faq-content').classList.toggle('hidden'); this.querySelector('.faq-icon').classList.toggle('rotate-180');">
+<span class="font-headline-sm text-[15px] font-bold text-primary">¿Qué ocurre si necesito cancelar o cambiar fechas?</span>
+<span class="material-symbols-outlined text-secondary faq-icon transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden font-body-sm text-body-sm text-on-surface-variant pt-2 border-t border-surface-container mt-2">
+          La gran mayoría de nuestros paquetes incluyen condiciones de cancelación flexible. Además, todos nuestros viajes cuentan con la opción de incorporar un seguro de libre desistimiento con cobertura por causa médica o laboral.
+        </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col">
+<button class="faq-btn flex items-center justify-between text-left w-full py-1" onclick="this.parentElement.querySelector('.faq-content').classList.toggle('hidden'); this.querySelector('.faq-icon').classList.toggle('rotate-180');">
+<span class="font-headline-sm text-[15px] font-bold text-primary">¿Gestionáis vosotros los visados y documentación?</span>
+<span class="material-symbols-outlined text-secondary faq-icon transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden font-body-sm text-body-sm text-on-surface-variant pt-2 border-t border-surface-container mt-2">
+          Sí. Te asesoramos paso a paso con los requisitos de entrada (ESTA, eTA, visados consulares, vacunas) y nos encargamos de la tramitación para que viajes con total seguridad administrativa.
+        </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col">
+<button class="faq-btn flex items-center justify-between text-left w-full py-1" onclick="this.parentElement.querySelector('.faq-content').classList.toggle('hidden'); this.querySelector('.faq-icon').classList.toggle('rotate-180');">
+<span class="font-headline-sm text-[15px] font-bold text-primary">¿Cómo contacto con mi asesor durante el viaje?</span>
+<span class="material-symbols-outlined text-secondary faq-icon transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden font-body-sm text-body-sm text-on-surface-variant pt-2 border-t border-surface-container mt-2">
+          Dispondrás del número directo de WhatsApp y teléfono de emergencias 24 horas de tu agente designado, disponible los 7 días de la semana para cualquier gestión imprevista en destino.
+        </div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 16: NEWSLETTER EXCLUSIVA -->
+<section class="w-full px-margin-mobile py-space-sm mb-space-md">
+<div class="w-full bg-secondary text-on-secondary rounded-2xl p-space-md shadow-lg flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[24px]">mark_email_unread</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-container font-bold">Ofertas Secretas</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-secondary">Recibe chollos antes que nadie</h3>
+<p class="font-body-sm text-body-sm text-surface-container-highest mt-1">Suscríbete gratis y descárgate nuestra <b>'Guía de Viajes 2025'</b> con trucos de expertos para ahorrar.</p>
+</div>
+<form class="flex flex-col gap-2 mt-1" onsubmit="event.preventDefault(); alert('¡Bienvenido/a a la comunidad viajera! Revisa tu email para descargar la guía.');">
+<div class="bg-surface rounded-xl px-3 py-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[20px]">mail</span>
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder-outline outline-none w-full p-0" placeholder="Escribe tu correo electrónico" required="" type="email"/>
+</div>
+<button class="w-full h-11 bg-on-tertiary-container text-on-tertiary font-label-md text-label-md rounded-xl flex items-center justify-center gap-1 shadow-md active:scale-95 transition-transform font-bold" type="submit">
+<span>Suscribirme y descargar guía</span>
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<span class="text-[11px] text-surface-container-highest text-center mt-0.5">Sin spam. Puedes darte de baja en cualquier momento con un clic.</span>
+</form>
+</div>
+</section>
+<!-- BLOQUE DE IDENTIFICACIÓN CORPORATIVA / LOGO DE MARCA -->
+<section class="w-full px-margin-mobile py-space-md bg-surface-container-lowest flex flex-col items-center text-center gap-2 shadow-sm">
+<img alt="Tu Agencia de Viajes" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WjnD502Btyngq1Rnm9BWQD40_lMTAB7Aj-mKBKSq4gGzH76KFowZotFkWWf4m9O9EII32IEZ1daaty3KC63cKIdV9jPBfqUWBGsNBteQmOmCPowc2vuSypi7h5moAID5Xs-WOnWkjVpYPR5Al3UJlLdvR04i1F5yhqYcNm3XA6vhHvluCRao-YGPOWeTTQ_OdfNYb_ID5Z4B2DfOPMc07-xf5jbsFQibPUlCsNuT9bTbjUGl9Obajsz5m4"/>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Licencia oficial CICMA / AV-Reg 28493</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs text-[12px]">
+      Agencia de viajes online y presencial adherida al sistema arbitral de consumo. Pasión por viajar, obsesión por tu tranquilidad.
+    </p>
+</section>
+</div>
+<script>
+  // Micro-interacción: Cambio visual de pestañas en el buscador Hero
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.search-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('bg-primary', 'text-on-primary');
+          t.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        tab.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        tab.classList.add('bg-primary', 'text-on-primary');
+      });
+    });
+  });
+</script><footer class="w-full bg-primary-container text-surface-container-highest px-margin-mobile pt-space-lg pb-10 mt-space-xl"><div class="flex flex-col gap-space-md"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-surface">Tu Agencia de Viajes</span><p class="font-body-sm text-body-sm text-on-primary-container mt-1">Especialistas en experiencias memorables, paquetes a medida y escapadas con asistencia 24/7.</p></div><div class="grid grid-cols-2 gap-space-md pt-space-sm"><div class="flex flex-col gap-1"><span class="font-label-md text-label-md text-surface font-semibold">Contacto</span><a class="font-body-sm text-body-sm text-on-primary-container flex items-center gap-1" href="tel:+34900000000"><span class="material-symbols-outlined text-[16px]">call</span> 900 000 000</a><span class="font-body-sm text-body-sm text-on-primary-container flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">mail</span> info@tuagencia.es</span><span class="font-body-sm text-body-sm text-on-primary-container flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">location_on</span> Gran Vía 42, Madrid</span></div><div class="flex flex-col gap-1"><span class="font-label-md text-label-md text-surface font-semibold">Garantía y Confianza</span><span class="font-body-sm text-body-sm text-on-primary-container flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary-container">verified_user</span> IATA Certificado</span><span class="font-body-sm text-body-sm text-on-primary-container flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary-container">lock</span> Pago Seguro 256-bit</span><span class="font-body-sm text-body-sm text-on-primary-container flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary-container">stars</span> Reseñas 4.9/5</span></div></div><div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md text-label-sm font-label-sm text-on-primary-container"><p>© 2024 Tu Agencia de Viajes. Todos los derechos reservados.</p><div class="flex gap-space-md"><span>Aviso Legal</span><span>Privacidad</span><span>Cookies</span></div></div></div></footer></main><a aria-label="Chat de WhatsApp directo" class="fixed bottom-24 right-4 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_10px_25px_-5px_rgba(37,211,102,0.45)] active:scale-95 transition-transform" href="https://wa.me/34600000000" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[28px]">chat</span></a><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(11,37,69,0.08)]" data-active-classes="text-secondary"><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><a aria-current="page" class="flex-1 flex flex-col items-center justify-center h-12 rounded-xl transition-colors text-secondary" data-path="landing-page" href="tel:+34900000000"><span class="material-symbols-outlined text-[22px]">call</span><span class="font-label-sm text-label-sm">Llamar</span></a><a class="flex-1 flex flex-col items-center justify-center h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="contacto-directo" href="https://wa.me/34600000000" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[22px] text-[#25D366]">chat</span><span class="font-label-sm text-label-sm">WhatsApp</span></a><a class="flex-[1.5] h-12 bg-on-tertiary-container hover:bg-[#e04522] text-on-tertiary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-1 shadow-[0_8px_20px_rgba(246,84,48,0.35)] active:scale-[0.98] transition-all px-2 text-center leading-tight" data-path="solicitud-presupuesto" href="#"><span class="material-symbols-outlined text-[18px]">request_quote</span><span>Pedir presupuesto</span></a></div></nav></body></html>
