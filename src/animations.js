@@ -12,6 +12,13 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.config({ ignoreMobileResize: true });
 
 const root = document.documentElement;
+
+// GSAP integra las propiedades CSS individuales (scale/translate/rotate) en su `transform` y puede dejar
+// `scale: none` en línea. Eso anularía el crecimiento .hover-grow (definido en CSS con `scale`).
+// Al terminar la animación de entrada se liberan, para que el hover vuelva a mandar la hoja de estilos.
+const releaseIndependentTransforms = (els) => Array.from(els).forEach((el) => {
+  ['scale', 'translate', 'rotate'].forEach((prop) => el.style.removeProperty(prop));
+});
 const mm = gsap.matchMedia();
 
 mm.add({ motion: '(prefers-reduced-motion: no-preference)', wide: '(min-width: 768px)' }, (ctx) => {
@@ -38,7 +45,11 @@ mm.add({ motion: '(prefers-reduced-motion: no-preference)', wide: '(min-width: 7
 
   // 4) Tarjetas y listas escalonadas
   gsap.utils.toArray('[data-stagger]').forEach((box) => {
-    gsap.from(box.children, { opacity: 0, y: 36, duration: 0.8, ease: 'power3.out', stagger: 0.1, scrollTrigger: once(box, 'top 85%'), clearProps: 'opacity,transform' });
+    gsap.from(box.children, {
+      opacity: 0, y: 36, duration: 0.8, ease: 'power3.out', stagger: 0.1, scrollTrigger: once(box, 'top 85%'), clearProps: 'opacity,transform',
+      onComplete: () => releaseIndependentTransforms(box.children),
+      onInterrupt: () => releaseIndependentTransforms(box.children)
+    });
   });
 
   // 5) Parallax sutil del fondo del hero (solo pantallas anchas; en móvil se omite para cuidar el rendimiento)
