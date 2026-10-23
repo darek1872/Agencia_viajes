@@ -4,6 +4,7 @@ import path from 'node:path';
 import { site } from './src/site.config.js';
 import { pages } from './src/pages.config.js';
 import { createRenderer } from './scripts/templating.mjs';
+import { ensureImages } from './scripts/ensure-images.mjs';
 import { buildSitemap, buildRobots, buildLlms, buildManifest } from './scripts/seo.mjs';
 
 export default defineConfig(({ command, mode }) => {
@@ -19,6 +20,8 @@ export default defineConfig(({ command, mode }) => {
   if (!siteUrl) siteUrl = 'http://localhost:5173';
   const indexing = env.VITE_ALLOW_INDEXING !== 'false';
 
+  // En compilación, las imágenes procesadas deben existir antes de leer el JSON (se generan si faltan).
+  if (command === 'build') ensureImages(root);
   const builtImages = path.join(root, 'src/images.built.json');
   const images = fs.existsSync(builtImages) ? JSON.parse(fs.readFileSync(builtImages, 'utf8')) : null;
   const imagesFallback = JSON.parse(fs.readFileSync(path.join(root, 'src/images.manifest.json'), 'utf8'));
