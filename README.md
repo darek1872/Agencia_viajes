@@ -15,7 +15,9 @@ cp .env.example .env  # y edita los valores
 npm run dev           # http://localhost:5173
 ```
 
-- Si una URL de imagen de Stitch ha caducado, guarda tu foto como `design/images/<nombre>.jpg` (nombres en `src/images.manifest.json`) y repite `npm run images`.
+- Si una URL de imagen de Stitch ha caducado, guarda tu foto como `design/images/<nombre>.jpg` (nombres en `src/images.manifest.json`; las mayúsculas no importan) y repite `npm run images`.
+- **Recomendado:** ejecuta `npm run images` en local, comprueba el resultado y sube a GitHub `design/images/`, `public/img/` y `src/images.built.json`. Así el despliegue no depende de enlaces externos que puedan caducar.
+- `npm run build` ya ejecuta `node scripts/images.mjs --if-missing`: si las imágenes procesadas existen las reutiliza; si faltan intenta generarlas; si no puede, **falla con un mensaje claro** (nunca publica sin imágenes).
 - Los datos de empresa se editan en **`src/site.config.js`**. Los textos `[[entre dobles corchetes]]` son marcadores a sustituir (también en `index.html`).
 
 ## 2. Compilar y comprobar
@@ -42,7 +44,7 @@ Si usas un servicio de formularios distinto de Formspree/Web3Forms, añade su do
 
 ## 4. Desplegar con dominio propio
 
-Es un sitio estático: publica la carpeta `dist/`. Define `VITE_SITE_URL` y `VITE_FORM_ENDPOINT` **en el panel del proveedor** (build command: `npm run images && npm run build`, o sube `public/img` y `src/images.built.json` al repositorio y usa solo `npm run build`; output: `dist`).
+Es un sitio estático: publica la carpeta `dist/`. Define `VITE_SITE_URL` y `VITE_FORM_ENDPOINT` **en el panel del proveedor** (build command: `npm run build`, que ya genera las imágenes si faltan; output: `dist`).
 
 **Netlify / Cloudflare Pages:** conecta el repositorio; `public/_headers` aplica cabeceras y caché. Sirven `404.html` con estado 404 automáticamente (no actives el "SPA fallback").
 **Vercel:** framework "Vite"; `vercel.json` incluye cabeceras y `trailingSlash`. `404.html` se sirve con 404.
