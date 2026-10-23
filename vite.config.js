@@ -1,11 +1,38 @@
 import { defineConfig, loadEnv } from 'vite';
 import fs from 'node:fs';
 import path from 'node:path';
+import { spawnSync } from 'node:child_process';
 import { site } from './src/site.config.js';
 import { pages } from './src/pages.config.js';
 import { createRenderer } from './scripts/templating.mjs';
-import { ensureImages } from './scripts/ensure-images.mjs';
 import { buildSitemap, buildRobots, buildLlms, buildManifest } from './scripts/seo.mjs';
+
+// Archivos que el build necesita. Linux distingue mayúsculas y el nombre debe ser exacto (sin ".txt" oculto).
+const REQUIRED_FILES = [
+  'scripts/images.mjs', 'scripts/templating.mjs', 'scripts/seo.mjs', 'scripts/verify-dist.mjs',
+  'src/site.config.js', 'src/pages.config.js', 'src/icons.js', 'src/main.js', 'src/ui.js', 'src/animations.js',
+  'src/styles.css', 'src/images.manifest.json'
+];
+
+/** Antes de leer src/images.built.json: comprueba los archivos y, si faltan las imágenes procesadas, las genera. */
+function ensureImages(root) {
+  const missing = REQUIRED_FILES.filter((f) => !fs.existsSync(path.join(root, f)));
+  if (missing.length) {
+    const ls = (d) => (fs.existsSync(path.join(root, d)) ? fs.readdirSync(path.join(root, d)).join(', ') : '(la carpeta no existe)');
+    throw new Error(
+      `Faltan archivos del proyecto en el repositorio: ${missing.join(', ')}.\n` +
+      `Contenido real de scripts/: ${ls('scripts')}\nContenido real de src/: ${ls('src')}\n` +
+      'Comprueba que el nombre sea exacto (minúsculas, extensión .mjs/.js sin ".txt") y que estén subidos a la rama que despliega Vercel.'
+    );
+  }
+  const r = spawnSync(process.execPath, [path.join(root, 'scripts/images.mjs'), '--if-missing'], { cwd: root, stdio: 'inherit' });
+  if (r.status !== 0) {
+    throw new Error(
+      'No se pudieron preparar las imágenes (mira los mensajes "✖" de arriba). Guarda tus fotos en design/images/ ' +
+      '(hero.jpg, viaje-1.jpg...), ejecuta "npm run images" en local y sube design/images, public/img y src/images.built.json.'
+    );
+  }
+}
 
 export default defineConfig(({ command, mode }) => {
   const root = process.cwd();
