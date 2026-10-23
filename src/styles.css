@@ -54,10 +54,15 @@
   .btn-cta:hover { transform: translateY(-1px) scale(1.02); box-shadow: 0 8px 20px rgba(214, 58, 26, 0.35); }
 }
 
-/* Las tarjetas crecen ligeramente al pasar el cursor (o al enfocar con teclado).
-   Se usa la propiedad `scale` (independiente de `transform`) para no chocar con GSAP.
-   Solo en dispositivos con ratón y sin "reducir movimiento". Va fuera de @layer para ganar a las utilidades. */
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .hover-grow { position: relative; transition: scale .35s cubic-bezier(.22, 1, .36, 1), box-shadow .3s, background-color .3s, color .3s; }
-  .hover-grow:hover, .hover-grow:focus-within { scale: 1.03; z-index: 2; }
+/* Las tarjetas crecen un 3 % al pasar el cursor (clase .hover-grow, aplicable a cualquier tarjeta, también si se añade después).
+   - Se anima `transform` en la tarjeta completa: no cambia el layout, así que las vecinas no se mueven.
+   - Solo con ratón/puntero preciso y sin "reducir movimiento": en táctil no hay hover que deje la tarjeta ampliada.
+   - Va fuera de @layer para ganar a las utilidades de Tailwind (transition-shadow, etc.).
+   - GSAP anima estas tarjetas al entrar y al terminar limpia su `transform` en línea (clearProps), devolviendo el control a este CSS. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .hover-grow { position: relative; transition: transform .28s cubic-bezier(.22, 1, .36, 1), box-shadow .3s, background-color .3s, color .3s; }
+  .hover-grow:hover { transform: scale(1.03); z-index: 2; }
+  /* Teclado: reglas separadas (si un navegador no entiende :has(), solo se pierde la última y no invalida las demás). */
+  .hover-grow:focus-visible { transform: scale(1.03); z-index: 2; }
+  .hover-grow:has(:focus-visible) { transform: scale(1.03); z-index: 2; }
 }
