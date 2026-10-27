@@ -61,7 +61,7 @@
    - GSAP anima estas tarjetas al entrar y al terminar limpia su `transform` en línea (clearProps), devolviendo el control a este CSS. */
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .hover-grow { position: relative; transition: transform .28s cubic-bezier(.22, 1, .36, 1), box-shadow .3s, background-color .3s, color .3s; }
-  .hover-grow:hover { transform: scale(1.03); z-index: 2; }
+  .hover-grow:hover { transform: scale(1.03); box-shadow: 0 20px 30px rgba(11, 37, 69, 0.16); z-index: 2; }
   /* Teclado: reglas separadas (si un navegador no entiende :has(), solo se pierde la última y no invalida las demás). */
   .hover-grow:focus-visible { transform: scale(1.03); z-index: 2; }
   .hover-grow:has(:focus-visible) { transform: scale(1.03); z-index: 2; }
