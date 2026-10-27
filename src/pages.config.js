@@ -2,7 +2,7 @@
 export const pages = [
   {
     file: 'index.html', path: '/', schema: 'WebPage', priority: '1.0', changefreq: 'weekly',
-    title: 'Agencia de viajes: circuitos, cruceros y escapadas | {{site.name}}',
+    title: 'Agencia de viajes a medida | {{site.name}}',
     description: 'Organizamos viajes a medida: paquetes, circuitos, cruceros y escapadas con asesor personal. Pide tu presupuesto gratis y sin compromiso.',
     ogImage: '/og/og-default.jpg', ogImageAlt: 'Viajes a medida con asesor personal', preloadHero: true
   },
